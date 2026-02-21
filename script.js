@@ -315,5 +315,11 @@ document.getElementById("city-input").addEventListener("keypress", (e) => {
   if (e.key === "Enter") fetchByCityName();
 });
 
+// İftar vakti geldiğinde çalışacak kod:
+if (window.AndroidInterface) {
+    window.AndroidInterface.sendNotification("Hayırlı İftarlar!", "İftar vakti geldi, Allah kabul etsin.");
+}
+
 getLocation();
 setInterval(updateTimer, 1000);
+
